@@ -1,4 +1,4 @@
-// write your JavaScript here
+
 document.getElementById('sub').addEventListener('click', function() {
     const email = document.getElementById('email').value;
     const error = document.getElementById('error');
