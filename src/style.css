@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  background: #E6E9FB;
+  height: 100vh;
+  width: 100vw;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+section#geral{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 90%;
+  padding: 20px;
+  top: 25%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(10px 10px 0px rgba(255, 255, 255, 0.40));
+}
+
+.texto{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+h1{
+  color: #111827;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+#text{
+  margin-top: 15px;
+  width: 100%;
+  max-width: 100%;
+  
+}
+
+.textoUm{
+  color: #374151;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#introducao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  
+}
+
+.email{
+  width: 100%;
+  max-width: 600px;
+  height: 72px;
+  padding: 16px 32px;
+  gap: 10px;
+  flex-shrink: 0;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1px solid #B3B8D8;
+  background: #FAFAFF;
+}
+
+.email::placeholder{
+  color: #B3B8D8;
+  font-family: Poppins;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sub{
+  width: 100%;
+  max-width: 600px;
+  margin-left: 0;
+  height: 72px;
+  padding: 16px 32px;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #111827;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 0.2px solid black; 
+  margin-top: 20px;
+}
+
+.sub:hover{
+  background-color: white;
+  color: #838ed9;
+  transition-duration: 0.5s;
+  border: 0.2px solid #B3B8D8; 
+  cursor: pointer;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(34,50,84,0.03);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.check svg {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #c8ccd4;
+  stroke-width: 1.5;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.check svg path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+}
+
+.check svg polyline {
+  stroke-dasharray: 22;
+  stroke-dashoffset: 66;
+}
+
+.check:hover:before {
+  opacity: 0;
+}
+
+.check:hover svg {
+  stroke: #4285f4;
+}
+
+#cbx:checked + .check svg {
+  stroke: #4285f4;
+}
+
+#cbx:checked + .check svg path {
+  stroke-dashoffset: 60;
+  transition: all 0.3s linear;
+}
+
+#cbx:checked + .check svg polyline {
+  stroke-dashoffset: 42;
+  transition: all 0.2s linear;
+  transition-delay: 0.15s;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 20px;
+  margin-top: 2vh;
+}
+
+.cenas{
+  color: #111827;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+  
+
+@media screen and (min-width: 970px){
+  section#geral{
+    max-width: 1094px;
+    max-height: 432px;
+  }
+
+  #introducao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+
+  .sub{
+    height: 72px;
+    width: 200px;
+    padding: 16px 32px;
+    gap: 10px;
+    flex-shrink: 0;
+    background: #111827;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 25px;
+    margin-top: 0px;
+    border: 0.2px solid black; 
+  }
+
+}
